@@ -24,7 +24,3 @@
 
 * [Decentralized Finance \(DeFi\)](defi/decentralized-finance-defi.md)
 
----
-
-* [Untitled](untitled-1.md)
-

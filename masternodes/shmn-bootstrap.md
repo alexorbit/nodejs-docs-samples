@@ -17,14 +17,14 @@
 
 1. On your keyboard, press the "WINDOWS" and "R" keys at the same time.
 2. This will open the "Run Search Window".
-3. Then type this: %appdata%\SHMN
+3. Then type this: `%appdata%\SHMN`
 4. Then press Enter.
 5. This will take you directly into your SHMN Folder.
 
 ### [\#]()Here's how to find your SHMN Folder for MAC OS:
 
 1. First open your "Go To Folder" finder
-2. Then type this: ~/Library/Application Support/SHMN
+2. Then type this: `~/Library/Application Support/SHMN`
 3. Then press Enter.
 4. This will take you directly into your SHMN Folder.
 
