@@ -4,19 +4,19 @@
 
 If you want the commands just to UPDATE your CURRENT MN:
 
-`wget https://raw.githubusercontent.com/stronghands-official/SHMN-masternode-setup/master/shmn_update_v24.sh`
-
-`chmod +x shmn_update_v24.sh`
-
-`./shmn_update_v24.sh`
+```bash
+wget https://raw.githubusercontent.com/stronghands-official/SHMN-masternode-setup/master/shmn_update_v24.sh
+chmod +x shmn_update_v24.sh
+./shmn_update_v24.sh
+```
 
 If you just want the commands for a NEW VPS setup:
 
-`wget https://raw.githubusercontent.com/stronghands-official/SHMN-masternode-setup/master/shmn_mn_setup.sh`
-
-`chmod +x shmn_mn_setup.sh`
-
-`./shmn_mn_setup.sh`
+```bash
+wget https://raw.githubusercontent.com/stronghands-official/SHMN-masternode-setup/master/shmn_mn_setup.sh
+chmod +x shmn_mn_setup.sh
+./shmn_mn_setup.sh
+```
 
 This StrongHands-Master \(MN\) script will automatically install almost all of the MN for you. You just need to have your masternode genkey ready. This code comes from Zoldurs many many forks for MN scripts, visit his page here. [https://github.com/zoldur](https://github.com/zoldur)
 
@@ -42,8 +42,11 @@ Once the coins have arrived in your wallet, create a new MN address by going to 
 
 Next go to Settings --&gt; Options --&gt; Wallet tab --&gt; check Display Coin Control features. This will allow you to easily send coins to your MN and choose ones incase you have other coins staking. Once done, restart the wallet.
 
-Now create your MN private key. This is very important! NEVER, NEVER, did I say NEVER? show this to anyone. Never. Period. Go to Help --&gt; Debug window --&gt; console tab, and type in:  
- `masternode genkey`
+Now create your MN private key. This is very important! NEVER, NEVER, did I say NEVER? show this to anyone. Never. Period. Go to Help --&gt; Debug window --&gt; console tab, and type in:
+
+```bash
+ masternode genkey
+```
 
 This is your MN private key. Keep this safe but close by as you will need it for the MN setup.
 
@@ -53,7 +56,9 @@ Next type in the amount of coins you wish to send to your MN \(this coin should 
 
 Once sent, please allow the transaction to FULLY confirm. You can see this by looking at the Transactions tab. Once your coins fully confirm you need to go back to the console \(Help --&gt; Debug window --&gt; console tab\) and type in:
 
-`masternode outputs`
+```bash
+masternode outputs
+```
 
 This will output your output of the transaction. If you do not see anything, then your coins have not fully confirmed yet or you did not send a correct amount of coins to use.
 
@@ -89,21 +94,25 @@ Username is: root Password will be asked next. Go to your vultr page and copy th
 
 Please copy and paste the following commands into you connection with your server. Most common would be to use Putty. NOTE: Don't click on the links as that will only show you code. There is no need to do so.
 
-`wget https://raw.githubusercontent.com/stronghands-official/SHMN-masternode-setup/master/shmn_mn_setup.sh`
-
-`chmod +x shmn_mn_setup.sh`
-
-`./shmn_mn_setup.sh`
+```bash
+wget https://raw.githubusercontent.com/stronghands-official/SHMN-masternode-setup/master/shmn_mn_setup.sh
+chmod +x shmn_mn_setup.sh
+./shmn_mn_setup.sh
+```
 
 You will need to copy and paste your masternode private key into putty when it asks. Then press Enter, when this is done, go back to your wallet, unlock your wallet in Settings. Once unlocked, start your masternode. Go to the Masternode tab, and try to start it, if it fails, try the command below in the NOTE. Once started go back to your VPS. type in
 
-`shmn-cli masternode status`
+```bash
+shmn-cli masternode status
+```
 
 If it says, Masternode Successfully Started then congrats you are done!
 
 NOTE: If you have trouble starting your masternode in the wallet itself \(not on the VPS\) run this command in the debug console.
 
-`masternode start-missing (passphrase)`
+```bash
+masternode start-missing (passphrase)
+```
 
 ### [\#]()Other Commands and Information
 
@@ -111,31 +120,45 @@ This information will be very useful once your MN is setup and ready.
 
 Displays currention information about the masternode
 
-`shmn-cli getinfo`
+```bash
+shmn-cli getinfo
+```
 
 You want to see status: "Masternode successfully started" and that will show your Masternode is ready to go.
 
-`shmn-cli masternode status`
+```bash
+shmn-cli masternode status
+```
 
 Will stop your masternode and wil automatically restart
 
-`shmn-cli stop`
+```bash
+shmn-cli stop
+```
 
 This will allow you to edit your masternode's wallet \(not your computer's wallet\). You can also you this command after the setup to fix if you input the incorrect MN key. Once open and done making changes, press Ctrl + o then Enter to save changes, then Ctrl + x to exit. Then run shmn-cli stop to restart the MN.
 
-`nano ~/.shmn/shmn.conf`
+```bash
+nano ~/.shmn/shmn.conf
+```
 
 This is where your StrongHands-Masternode program files is saved to
 
-`cd /usr/local/bin`
+```bash
+cd /usr/local/bin
+```
 
 Return to root home folder
 
-`cd ~`
+```bash
+cd ~
+```
 
 This will give you access to the folder of StrongHands-Masternode files. Notice the period in front of the folder. If your are in the home folder and do **ls** command, it will not show the folder. Period means hidden. Correct command to display this folder in the home folder is **ls -al**
 
-`cd ~/.shmn`
+```bash
+cd ~/.shmn
+```
 
 Questions? Need help? You can reach the support team on [Telegram](https://t.me/SHNDsupport)
 
